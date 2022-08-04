@@ -829,6 +829,8 @@ static const char *dmenucmd[] = {
 	"-m", dmenumon,
 	#endif // NODMENU_PATCH
 	"-p", "Run:",
+	"-X", "20",
+	"-W", "1880", // 1920 - 40 = 1880
 	"-fn", dmenufont,
 	"-nb", normbgcolor,
 	"-nf", normfgcolor,
