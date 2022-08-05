@@ -867,11 +867,27 @@ static Key on_empty_keys[] = {
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
+	// No Patch (there are more below - just search for "No Patch")
+	{ MODKEY,                       XK_r,          spawn,                  {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY,                       XK_Left,       setmfact,               {.f = -0.05} },
+	{ MODKEY,                       XK_Right,      setmfact,               {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
+	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
+	{ MODKEY,                       XK_space,      setlayout,              {0} },
+	{ MODKEY|ShiftMask,             XK_space,      togglefloating,         {0} },
+	TAGKEYS(                        XK_1,                                  0)
+	TAGKEYS(                        XK_2,                                  1)
+	TAGKEYS(                        XK_3,                                  2)
+	TAGKEYS(                        XK_4,                                  3)
+	TAGKEYS(                        XK_5,                                  4)
+	TAGKEYS(                        XK_6,                                  5)
+	TAGKEYS(                        XK_7,                                  6)
+	TAGKEYS(                        XK_8,                                  7)
+	TAGKEYS(                        XK_9,                                  8)
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
-	{ MODKEY,                       XK_r,          spawn,                  {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -887,6 +903,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY,                              focus)
 	STACKKEYS(MODKEY|ShiftMask,                    push)
 	#else
+	// No Patch
 	{ MODKEY,                       XK_Down,       focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_Up,         focusstack,             {.i = -1 } },
 	#endif // STACKER_PATCH
@@ -920,8 +937,6 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },
 	#endif // FLEXTILE_DELUXE_LAYOUT
-	{ MODKEY,                       XK_Left,       setmfact,               {.f = -0.05} },
-	{ MODKEY,                       XK_Right,      setmfact,               {.f = +0.05} },
 	#if CFACTS_PATCH
 	{ MODKEY|ShiftMask,             XK_h,          setcfact,               {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_l,          setcfact,               {.f = -0.25} },
@@ -1007,14 +1022,12 @@ static Key keys[] = {
 	#if BAR_WINTITLEACTIONS_PATCH
 	{ MODKEY|ControlMask,           XK_z,          showhideclient,         {0} },
 	#endif // BAR_WINTITLEACTIONS_PATCH
-	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
 	#if KILLUNSEL_PATCH
 	{ MODKEY|ShiftMask,             XK_x,          killunsel,              {0} },
 	#endif // KILLUNSEL_PATCH
 	#if SELFRESTART_PATCH
 	{ MODKEY|ShiftMask,             XK_r,          self_restart,           {0} },
 	#endif // SELFRESTART_PATCH
-	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
 	#if RESTARTSIG_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_q,          quit,                   {1} },
 	#endif // RESTARTSIG_PATCH
@@ -1044,8 +1057,6 @@ static Key keys[] = {
 	{ MODKEY|Mod5Mask|Mod1Mask,     XK_Tab,        rotatelayoutaxis,       {.i = -4 } },   /* flextile, 4 = secondary stack axis */
 	{ MODKEY|ControlMask,           XK_Return,     mirrorlayout,           {0} },          /* flextile, flip master and stack areas */
 	#endif // FLEXTILE_DELUXE_LAYOUT
-	{ MODKEY,                       XK_space,      setlayout,              {0} },
-	{ MODKEY|ShiftMask,             XK_space,      togglefloating,         {0} },
 	#if MAXIMIZE_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_h,          togglehorizontalmax,    {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_l,          togglehorizontalmax,    {0} },
@@ -1233,15 +1244,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F2,         mpdchange,              {.i = +1} },
 	{ MODKEY,                       XK_Escape,     mpdcontrol,             {0} },
 	#endif // MPDCONTROL_PATCH
-	TAGKEYS(                        XK_1,                                  0)
-	TAGKEYS(                        XK_2,                                  1)
-	TAGKEYS(                        XK_3,                                  2)
-	TAGKEYS(                        XK_4,                                  3)
-	TAGKEYS(                        XK_5,                                  4)
-	TAGKEYS(                        XK_6,                                  5)
-	TAGKEYS(                        XK_7,                                  6)
-	TAGKEYS(                        XK_8,                                  7)
-	TAGKEYS(                        XK_9,                                  8)
 };
 
 #if KEYMODES_PATCH
