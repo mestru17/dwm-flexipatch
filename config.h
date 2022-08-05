@@ -840,6 +840,7 @@ static const char *dmenucmd[] = {
 	NULL
 };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *file_explorer_cmd[]  = { "pcmanfm", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -870,6 +871,7 @@ static Key keys[] = {
 	// No Patch (there are more below - just search for "No Patch")
 	{ MODKEY,                       XK_r,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY,                       XK_e,          spawn,                  {.v = file_explorer_cmd } },
 	{ MODKEY,                       XK_Left,       setmfact,               {.f = -0.05} },
 	{ MODKEY,                       XK_Right,      setmfact,               {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
