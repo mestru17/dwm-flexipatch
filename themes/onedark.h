@@ -1,5 +1,4 @@
-// Made by roidm at https://gitlab.com/roidm/suckless/-/tree/main/dwm-powerline
-
+// One Dark theme by roidm at https://gitlab.com/roidm/suckless/-/tree/main/dwm-powerline
 static char c000000[]                    = "#bc7ad9"; // placeholder value
 
 static char normfgcolor[]                = "#efefef";
@@ -41,16 +40,3 @@ static char urgfgcolor[]                 = "#efefef";
 static char urgbgcolor[]                 = "#1e222a";
 static char urgbordercolor[]             = "#6bb2c0";
 static char urgfloatcolor[]              = "#1e222a";
-
-static char *statuscolors[][ColCount] = {
-	/*                       fg                bg                border                float */
-	[SchemeNorm]         = { "#e06c75",        normbordercolor,  normbordercolor,      normfloatcolor },
-	[SchemeSel]          = { "#c9866f",        normbgcolor,      selbordercolor,       selfloatcolor },
-	[SchemeTitleNorm]    = { "#39D7E5",        normbordercolor,  titlenormbordercolor, titlenormfloatcolor },
-	[SchemeTitleSel]     = { "#6bb2c0",        normbgcolor,      titleselbordercolor,  titleselfloatcolor },
-	[SchemeTagsNorm]     = { "#ebcb8d",        normbordercolor,  tagsnormbordercolor,  tagsnormfloatcolor },
-	[SchemeTagsSel]      = { "#bc7ad9",        normbgcolor,      tagsselbordercolor,   tagsselfloatcolor },
-	[SchemeHidNorm]      = { "#71abeb",        normbordercolor,  c000000,              c000000 },
-	[SchemeHidSel]       = { "#9ec07c",        normbgcolor,      c000000,              c000000 },
-	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
-};
