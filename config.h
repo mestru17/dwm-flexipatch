@@ -802,6 +802,7 @@ static const char *dmenucmd[] = {
 };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *file_explorer_cmd[]  = { "pcmanfm", NULL };
+static const char *emacs_cmd[]  = { "emacsclient", "-c", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -833,6 +834,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY,                       XK_e,          spawn,                  {.v = file_explorer_cmd } },
+	{ MODKEY,                       XK_i,          spawn,                  {.v = emacs_cmd } },
 	{ MODKEY,                       XK_Left,       setmfact,               {.f = -0.05} },
 	{ MODKEY,                       XK_Right,      setmfact,               {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_c,          killclient,             {0} },
