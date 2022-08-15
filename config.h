@@ -130,9 +130,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "FiraCode Nerd Font:size=11" };
+static const char *fonts[]               = { "FiraCode Nerd Font:size=12" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "FiraCode Nerd Font:size=11";
+static const char dmenufont[]            = "FiraCode Nerd Font:size=12";
 
 // Theme (color scheme)
 #include "themes/onedark.h"
